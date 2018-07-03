@@ -1,6 +1,0 @@
-<template name="menu">
-  <view>
-    <text>{{title}}</text>
-    <slot></slot>
-  </view>
-</template>

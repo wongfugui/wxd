@@ -1,4 +1,7 @@
 {
-  "navigationBarTitleText": "便利购",
-  "backgroundTextStyle": "dark"
+  "backgroundTextStyle": "dark",
+
+  "usingComponents": {
+    "header": "../../common/header"
+  }
 }

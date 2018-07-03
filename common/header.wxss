@@ -1,14 +1,3 @@
-/**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  /* padding: 200rpx 0; */
-  box-sizing: border-box;
-} 
-
 .header{
   width: 100%;
   height: 55px;
@@ -23,14 +12,15 @@
   width: 20px;
   padding: 11px;
   float: left
+
 }
-.logo{
+ .logo{
   width: 100px;
   height: 42px;
-}
-.header-user{
+} 
+/* .header-user{
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  float: right
-}
+
+} */
