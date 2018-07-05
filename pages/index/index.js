@@ -4,10 +4,28 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    slider: [
+      {
+        url: '../../images/s1.png',
+        title: '了解一些额外知识，让开发锦上添花',
+        Summary: '',
+      },
+      {
+        url: '../../images/s2.png',
+        title: 'RESETful API 设计规范',
+        Summary: '',
+      },
+      {
+        url: '../../images/s3.png',
+        title: '160行代码仿Vue实现极简双向绑定',
+        Summary: '附详细注释',
+      },
+      {
+        url: '../../images/s4.png',
+        title: 'React性能优化',
+        Summary: '虚拟Dom原理浅析',
+      },
+    ]
   },
   onLoad: function () {
   },

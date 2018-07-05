@@ -3,6 +3,15 @@
   <header></header>
 
   <view class='content'>
+    <swiper indicator-dots='{{true}}' autoplay='{{true}}' class='index-slider'>
+      <block wx:for="{{slider}}" wx:key='url'>
+        <swiper-item style="background-image: url({{item.url}})">
+          <view class='slider-content'>
+            <text class='slider-title'>{{item.title}}</text>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
 
 </view>
