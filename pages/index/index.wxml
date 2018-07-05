@@ -5,9 +5,11 @@
   <view class='content'>
     <swiper indicator-dots='{{true}}' autoplay='{{true}}' class='index-slider'>
       <block wx:for="{{slider}}" wx:key='url'>
-        <swiper-item style="background-image: url({{item.url}})">
+        <swiper-item>
+          <image src='{{item.url}}'></image>
           <view class='slider-content'>
             <text class='slider-title'>{{item.title}}</text>
+            <text class='slider-summary'>{{item.summary}}</text>
           </view>
         </swiper-item>
       </block>
