@@ -3,17 +3,44 @@
   <header></header>
 
   <view class='content'>
-    <swiper indicator-dots='{{true}}' autoplay='{{true}}' class='index-slider'>
+    <swiper autoplay='{{true}}' class='index-slider'>
       <block wx:for="{{slider}}" wx:key='url'>
         <swiper-item>
           <image src='{{item.url}}'></image>
           <view class='slider-content'>
             <text class='slider-title'>{{item.title}}</text>
-            <text class='slider-summary'>{{item.summary}}</text>
           </view>
         </swiper-item>
       </block>
     </swiper>
+
+    <view>
+      <view class='sub-title'>
+        <text class='sub'>我的订阅</text>
+        <text class='tj'>只看推荐</text>
+      </view>
+
+      <view class='article-content'>
+
+        <block wx:for='{{articles}}' wx:key='title'>
+          <view class='article-block'>
+            <view class='article-left'>
+              <text class='author'>来自作者 {{item.author}}</text>
+              <text class='title'>{{item.title}}</text>
+              <text class='summary'>{{item.summary}}</text>
+            </view>
+            <image src='{{item.img}}' class='article-right'></image>
+            <view class='article-info'>
+              <image src='../../images/zan.png'></image>
+              <text class='zan'> x {{item.zan}}</text>
+              <text class='author'>{{item.author}}</text>
+              <text class='date'>{{item.date}}</text>
+            </view>
+          </view>
+        </block>
+
+      </view>
+    </view>
   </view>
 
 </view>

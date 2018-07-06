@@ -1,24 +1,134 @@
 /**index.wxss**/
-.content{
+
+.content {
   box-sizing: border-box;
   padding: 40rpx 20rpx 20rpx;
   width: 100%;
 }
-.index-slider{
+
+.index-slider {
   width: 100%;
-  height: 160rpx;
+  height: 180rpx;
   box-sizing: border-box;
-  display: block;
 }
-.index-slider image{
+
+swiper-item image {
   width: 100%;
-  height: 160rpx;
+  height: 180rpx;
+  position: absolute;
+  top: 0;
+  z-index: 99;
 }
-.slider-title{
-  font-size: 24rpx;
-   color: #ffffff; 
-}
-.slider-content{
-  margin-top: 80rpx;
+
+.slider-content {
+  margin-top: 90rpx;
+  height: 90rpx;
+  z-index: 100;
+  position: relative;
+  padding: 30rpx 0 0 20rpx;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+.slider-title {
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.sub-title {
+  border-bottom: 1rpx solid #ddd;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.sub-title .sub {
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+
+.sub-title .tj {
+  font-size: 24rpx;
+  line-height: 60rpx;
+  color: #ccc;
+  border-left: 1rpx solid #ddd;
+  margin-left: 10rpx;
+  padding-left: 10rpx;
+}
+
+.article-block {
+  margin-bottom: 30rpx;
+}
+
+.article-left {
+  width: 530rpx;
+  float: left;
+}
+
+.article-left .author {
+  color: #ccc;
+  font-size: 24rpx;
+  display: block;
+  line-height: 40rpx;
+}
+
+.article-left .title {
+  font-size: 32rpx;
+  display: block;
+  line-height: 50rpx;
+  height: 50rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.article-left .summary {
+  color: #ccc;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  height: 72rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10rpx;
+  -webkit-line-clamp: 2;
+}
+
+.article-right {
+  width: 160rpx;
+  float: right;
+  height: 130rpx;
+  border-radius: 10rpx;
+  margin-top: 46rpx;
+  margin-bottom: 10rpx;
+}
+
+.article-info {
+  margin-top: 20rpx;
+  clear: both;
+}
+
+.article-info .author {
+  color: #8c8c8c;
+  font-size: 24rpx;
+  padding-left: 20rpx;
+}
+
+.article-info .date {
+  color: #ccc;
+  font-size: 24rpx;
+  padding-left: 20rpx;
+}
+
+.article-info image {
+  height: 40rpx;
+  width: 40rpx;
+  display: inline-block;
+  position: relative;
+  top: 8rpx;
+}
+
+.article-info .zan {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #009a61;
 }

@@ -31,19 +31,19 @@
         "selectedIconPath": "images/chatf.png"
       },
       {
-        "pagePath": "pages/setting/setting",
+        "pagePath": "pages/logs/logs",
         "text": "专栏",
         "iconPath": "images/write.png",
         "selectedIconPath": "images/writef.png"
       },
       {
-        "pagePath": "pages/setting/setting",
+        "pagePath": "pages/logs/logs",
         "text": "讲座",
         "iconPath": "images/play.png",
         "selectedIconPath": "images/playf.png"
       },
       {
-        "pagePath": "pages/setting/setting",
+        "pagePath": "pages/logs/logs",
         "text": "更多",
         "iconPath": "images/menu.png",
         "selectedIconPath": "images/menuf.png"
