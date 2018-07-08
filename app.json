@@ -9,8 +9,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "SegmentFault",
     "navigationBarTextStyle":"black",
-    "backgroundColor": "#ededed",
-    "enablePullDownRefresh": true
+    "backgroundColor": "#ededed"
   },
   "tabBar": {
     "color": "#9e9e9e",

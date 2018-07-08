@@ -1,6 +1,6 @@
 {
   "backgroundTextStyle": "dark",
-
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "header": "../../common/header"
   }
