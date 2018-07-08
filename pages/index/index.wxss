@@ -10,7 +10,7 @@
   margin-bottom: 40rpx;
 }
 
-.index-tab text{
+.index-tab view{
   display: inline-block;
   width: 175rpx;
   height: 60rpx;
@@ -19,7 +19,8 @@
   font-size: 28rpx;
   text-align: center;
   color: #ccc;
-  border-radius: 10rpx; 
+  border-radius: 10rpx;
+   word-break:break-all;
 }
 .index-tab .active{
   background: #009a61;

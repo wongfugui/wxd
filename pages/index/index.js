@@ -106,7 +106,8 @@ const dataList3 = [{
 
 Page({
   data: {
-    count: 0,
+    tabs: ['我的订阅', '近期热门', '最新内容', '技术频道'],
+    curTab: 0,
     slider: [{
         url: '../../images/s1.png',
         title: '了解一些额外知识，让开发锦上添花',
@@ -153,5 +154,11 @@ Page({
       title: '已经到底啦！',
       icon: 'none'
     })
+  },
+
+  switchTab: function(e){
+    this.setData({
+      curTab: e.currentTarget.dataset.index
+    });
   }
 })

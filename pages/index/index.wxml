@@ -4,50 +4,61 @@
 
   <view class='content'>
     <view class='index-tab'>
-      <text class='active'>我的订阅</text>
-      <text>近期热门</text>
-      <text>最新内容</text>
-      <text>技术频道</text>
+      <view wx:for='{{tabs}}' wx:for-index='index' data-index='{{index}}' wx:key='{{*this}}' class="{{curTab === index ? 'active' : ''}}" bindtap="switchTab">
+        {{item}}
+      </view>
     </view>
 
-    <swiper autoplay='{{true}}' class='index-slider'>
-      <block wx:for="{{slider}}" wx:key='url'>
-        <swiper-item>
-          <image src='{{item.url}}'></image>
-          <view class='slider-content'>
-            <text class='slider-title'>{{item.title}}</text>
-          </view>
-        </swiper-item>
-      </block>
-    </swiper>
-
-    <view>
-      <view class='sub-title'>
-        <text class='sub'>我的订阅</text>
-        <text class='tj'>只看推荐</text>
-      </view>
-
-      <view class='article-content'>
-
-        <block wx:for='{{articles}}' wx:key='title'>
-          <view class='article-block'>
-            <view class='article-left'>
-              <text class='author'>来自作者 {{item.author}}</text>
-              <text class='title'>{{item.title}}</text>
-              <text class='summary'>{{item.summary}}</text>
+    <view hidden="{{curTab === 0 ? '' : 'true'}}">
+      <swiper autoplay='{{true}}' class='index-slider'>
+        <block wx:for="{{slider}}" wx:key='url'>
+          <swiper-item>
+            <image src='{{item.url}}'></image>
+            <view class='slider-content'>
+              <text class='slider-title'>{{item.title}}</text>
             </view>
-            <image src='{{item.img}}' class='article-right'></image>
-            <view class='article-info'>
-              <image src='../../images/zan.png'></image>
-              <text class='zan'> x {{item.zan}}</text>
-              <text class='author'>{{item.author}}</text>
-              <text class='date'>{{item.date}}</text>
-            </view>
-          </view>
+          </swiper-item>
         </block>
+      </swiper>
 
+      <view>
+        <view class='sub-title'>
+          <text class='sub'>我的订阅</text>
+          <text class='tj'>只看推荐</text>
+        </view>
+
+        <view class='article-content'>
+
+          <block wx:for='{{articles}}' wx:key='title'>
+            <view class='article-block'>
+              <view class='article-left'>
+                <text class='author'>来自作者 {{item.author}}</text>
+                <text class='title'>{{item.title}}</text>
+                <text class='summary'>{{item.summary}}</text>
+              </view>
+              <image src='{{item.img}}' class='article-right'></image>
+              <view class='article-info'>
+                <image src='../../images/zan.png'></image>
+                <text class='zan'> x {{item.zan}}</text>
+                <text class='author'>{{item.author}}</text>
+                <text class='date'>{{item.date}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
       </view>
     </view>
+    
+    <view hidden="{{curTab === 1 ? '' : 'true'}}">
+      近期热门
+    </view>
+    <view hidden="{{curTab === 2 ? '' : 'true'}}">
+      最新内容
+    </view>
+    <view hidden="{{curTab === 3 ? '' : 'true'}}">
+      技术频道
+    </view>
+
   </view>
 
 </view>
