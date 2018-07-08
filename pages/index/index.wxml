@@ -3,6 +3,13 @@
   <header></header>
 
   <view class='content'>
+    <view class='index-tab'>
+      <text class='active'>我的订阅</text>
+      <text>近期热门</text>
+      <text>最新内容</text>
+      <text>技术频道</text>
+    </view>
+
     <swiper autoplay='{{true}}' class='index-slider'>
       <block wx:for="{{slider}}" wx:key='url'>
         <swiper-item>
