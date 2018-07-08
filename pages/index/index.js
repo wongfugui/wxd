@@ -135,14 +135,15 @@ Page({
       if (this.data.articles.length < 10){
         this.setData({articles: this.data.articles.concat(dataList2)})
         wx.stopPullDownRefresh()
-        return
       }
       if (dataList3.length < 12) {
         this.setData({ articles: this.data.articles.concat(dataList3) })
         wx.stopPullDownRefresh()
-        return
       }
-      console.log('no more')
+      wx.showToast({
+        title: '已刷新',
+        icon: 'none'
+      })
       wx.stopPullDownRefresh()
     }, 1000)
   },
