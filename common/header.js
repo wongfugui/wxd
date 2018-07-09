@@ -7,7 +7,7 @@ Component({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
-  created: function () {
+  ready: function () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

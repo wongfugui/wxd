@@ -1,11 +1,4 @@
 /**index.wxss**/
-
-.content {
-  box-sizing: border-box;
-  padding: 40rpx 20rpx 20rpx;
-  width: 100%;
-}
-
 .index-tab{
   margin-bottom: 40rpx;
 }

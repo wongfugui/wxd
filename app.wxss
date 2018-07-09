@@ -8,3 +8,9 @@
   /* padding: 200rpx 0; */
   box-sizing: border-box;
 } 
+
+.content {
+  box-sizing: border-box;
+  padding: 40rpx 20rpx 20rpx;
+  width: 100%;
+}

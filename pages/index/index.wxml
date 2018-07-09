@@ -29,8 +29,8 @@
 
         <view class='article-content'>
 
-          <block wx:for='{{articles}}' wx:key='title'>
-            <view class='article-block'>
+          <block wx:for='{{articles}}' wx:key='id'>
+            <view class='article-block' bindtap='articleLink' data-id='{{item.id}}'>
               <view class='article-left'>
                 <text class='author'>来自作者 {{item.author}}</text>
                 <text class='title'>{{item.title}}</text>
