@@ -1,9 +1,0 @@
-<view class='header'>
-  <image class='header-search' src='../images/search.png'></image>
-  <image class='logo' src='../images/logo-b.svg'></image> 
-  
-  <button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="setUserInfo" class='header-user'>
-    <image src='../images/user.png'></image> 
-  </button> 
-  <image wx:else class='header-user' src='{{userInfo.avatarUrl}}'></image> 
-</view>

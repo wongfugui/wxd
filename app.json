@@ -1,53 +1,12 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/setting/setting",
-    "pages/article/article"
+    "pages/index/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "SegmentFault",
+    "navigationBarTitleText": "weather",
     "navigationBarTextStyle":"black",
     "backgroundColor": "#ededed"
-  },
-  "tabBar": {
-    "color": "#9e9e9e",
-    "selectedColor": "#009a61",
-    "backgroundColor": "#fafafa",
-    "borderStyle": "white",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/homef.png"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "问答",
-        "iconPath": "images/chat.png",
-        "selectedIconPath": "images/chatf.png"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "专栏",
-        "iconPath": "images/write.png",
-        "selectedIconPath": "images/writef.png"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "讲座",
-        "iconPath": "images/play.png",
-        "selectedIconPath": "images/playf.png"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "更多",
-        "iconPath": "images/menu.png",
-        "selectedIconPath": "images/menuf.png"
-      }
-    ]
   }
 }
