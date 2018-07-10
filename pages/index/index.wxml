@@ -9,4 +9,14 @@
       bindconfirm='commitSearch' value='{{searchText}}' disabled='{{enableSearch}}'></input>
     </view>
   </view>
+  <view class='content' style='margin-top: 60px'>
+    <view class='info'>
+      <view class='city'>重庆市<view class='update-date'>07-10 22:55 更新</view></view>
+      <view class='temp'>33<text>°</text></view>
+      <view class='weather'>阴转多云</view>
+      <view class='pm'>
+        <text>优 45</text>
+      </view>
+    </view>
+  </view>  
 </view>
