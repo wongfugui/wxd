@@ -4,9 +4,8 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#40a7e7",
     "navigationBarTitleText": "weather",
-    "navigationBarTextStyle":"black",
-    "backgroundColor": "#ededed"
+    "navigationBarTextStyle":"white"
   }
 }
