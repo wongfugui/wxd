@@ -1,4 +1,12 @@
 <!--index.wxml-->
 <view class="container">
-  
+  <view class='bcg' style='background: {{bcgColor}}'></view>
+
+  <view class='search' style='background:{{bcgColor}}'>
+    <view class='wrapper'>
+      <image src='/img/search.png'></image>
+      <input placeholder-class='placeholderClass' confirm-type='search' placeholder='查询其他城市' maxlength='20' 
+      bindconfirm='commitSearch' value='{{searchText}}' disabled='{{enableSearch}}'></input>
+    </view>
+  </view>
 </view>
