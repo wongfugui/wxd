@@ -3,9 +3,9 @@
     "pages/index/index"
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#40a7e7",
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "weather",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle":"black"
   }
 }

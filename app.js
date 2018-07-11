@@ -1,8 +1,20 @@
 //app.js
+
+const bmap = require('./lib/bmap-wx.js')
+
 App({
-  onLaunch: function () {
+  onLaunch: function() {
+    const BMap = new bmap.BMapWX({
+      ak: 'jc1dIcPqBa8nmKfDwx9u8lGS13cF35d4'
+    })
+
+    let success = data => console.log(data)
+    BMap.weather({
+      success: success
+    }); 
+
     wx.getSystemInfo({
-      success:  (res) => {
+      success: (res) => {
         this.globalData.systeminfo = res
       },
     })

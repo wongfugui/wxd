@@ -1,22 +1,100 @@
 <!--index.wxml-->
 <view class="container">
-  <view class='bcg' style='background: {{bcgColor}}'></view>
 
-  <view class='search' style='background:{{bcgColor}}'>
-    <view class='wrapper'>
-      <image src='/img/search.png'></image>
-      <input placeholder-class='placeholderClass' confirm-type='search' placeholder='查询其他城市' maxlength='20' 
-      bindconfirm='commitSearch' value='{{searchText}}' disabled='{{enableSearch}}'></input>
-    </view>
-  </view>
-  <view class='content' style='margin-top: 60px'>
-    <view class='info'>
-      <view class='city'>重庆市<view class='update-date'>07-10 22:55 更新</view></view>
-      <view class='temp'>33<text>°</text></view>
+  <view class='main-info'>
+    <view class='today'>
+      <view class='city'>
+        <image src='../../images/location.png'></image>
+        <text>重庆市</text>
+      </view>
+      <view class='update-date'>07-10 22:55 更新</view>
+      <view class='temp'>33
+        <text>°</text>
+      </view>
       <view class='weather'>阴转多云</view>
       <view class='pm'>
         <text>优 45</text>
       </view>
     </view>
-  </view>  
+
+    <swiper class='two-days' autoplay='{{true}}' circular='{{true}}'>
+      <swiper-item>
+        <view class='day1'>
+          <view class='days-block'>
+            <view class='floatL'>今天</view>
+            <view class='floatR'>35-25c</view>
+          </view>
+          <view class='days-block'>
+            <view class='floatL'>多云</view>
+            <image class='floatR' src='http://api.map.baidu.com/images/weather/day/duoyun.png'></image>
+          </view>
+        </view>
+
+        <view class='day2'>
+          <view class='days-block'>
+            <view class='floatL'>今天</view>
+            <view class='floatR'>35-25c</view>
+          </view>
+          <view class='days-block'>
+            <view class='floatL'>多云</view>
+            <image class='floatR' src='http://api.map.baidu.com/images/weather/day/duoyun.png'></image>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class='day1'>
+          <view class='days-block'>
+            <view class='floatL'>今天</view>
+            <view class='floatR'>35-25c</view>
+          </view>
+          <view class='days-block'>
+            <view class='floatL'>多云</view>
+            <image class='floatR' src='http://api.map.baidu.com/images/weather/day/duoyun.png'></image>
+          </view>
+        </view>
+
+        <view class='day2'>
+          <view class='days-block'>
+            <view class='floatL'>今天</view>
+            <view class='floatR'>35-25c</view>
+          </view>
+          <view class='days-block'>
+            <view class='floatL'>多云</view>
+            <image class='floatR' src='http://api.map.baidu.com/images/weather/day/duoyun.png'></image>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class='guide'>
+    <view class='item'>
+      <image src="../../images/clothing.png">
+      </image>
+      <view class="right">
+        <view class="zs">穿衣指数 炎热</view>
+        <view class="jy">天气炎热，建议着短衫、短裙、短裤、薄型T恤衫等清凉夏季服装。</view>
+      </view>
+    </view>
+
+    <view class='item'>
+      <image src="../../images/clothing.png">
+      </image>
+      <view class="right">
+        <view class="zs">穿衣指数 炎热</view>
+        <view class="jy">天气炎热，建议着短衫、短裙、短裤、薄型T恤衫等清凉夏季服装。</view>
+      </view>
+    </view>
+
+    <view class='item'>
+      <image src="../../images/clothing.png">
+      </image>
+      <view class="right">
+        <view class="zs">穿衣指数 炎热</view>
+        <view class="jy">天气炎热，建议着短衫、短裙、短裤、薄型T恤衫等清凉夏季服装。</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='data-source'>数据来源：百度开放平台</view>
 </view>
