@@ -13,5 +13,26 @@ Page({
 
   },
 
+  onShow: function (){
+    this.getWeather()
+  },
+
+  onPullDownRefresh(res) {
+    this.getWeather()
+  },
+
+  getWeather: function(location){
+    const BMap = new bmap.BMapWX({
+      ak: globalData.ak
+    })
+    const success = (data) => {
+      console.log(data)
+    }
+    BMap.weather({
+      location,
+      success
+    }); 
+  }
+
 
 })
