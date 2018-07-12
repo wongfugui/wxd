@@ -5,15 +5,15 @@
     <view class='today'>
       <view class='city'>
         <image src='../../images/location.png'></image>
-        <text>重庆市</text>
+        <text>{{weatherData.currentCity || '--'}}</text>
       </view>
       <view class='update-date'>07-10 22:55 更新</view>
-      <view class='temp'>33
-        <text>°</text>
+      <view class='temp'>
+        {{temp || '--'}}<text>°</text>
       </view>
-      <view class='weather'>阴转多云</view>
+      <view class='weather'>{{weather || '--'}}</view>
       <view class='pm'>
-        <text>优 45</text>
+        <text>{{weatherData.pm25 || '--'}}</text>
       </view>
     </view>
 
@@ -69,7 +69,7 @@
 
   <view class='guide'>
     <view class='item'>
-      <image src="../../images/clothing.png">
+      <image src="../../images/cy.png">
       </image>
       <view class="right">
         <view class="zs">穿衣指数 炎热</view>
@@ -78,7 +78,7 @@
     </view>
 
     <view class='item'>
-      <image src="../../images/clothing.png">
+      <image src="../../images/xc.png">
       </image>
       <view class="right">
         <view class="zs">穿衣指数 炎热</view>
@@ -87,7 +87,7 @@
     </view>
 
     <view class='item'>
-      <image src="../../images/clothing.png">
+      <image src="../../images/gm.png">
       </image>
       <view class="right">
         <view class="zs">穿衣指数 炎热</view>
