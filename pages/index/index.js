@@ -36,7 +36,7 @@ Page({
         temp,
         weather
       })
-      console.log(weather)
+      console.log(weatherData)
     }
     BMap.weather({
       location,
