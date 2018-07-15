@@ -12,8 +12,9 @@
 }
 
 .today {
-  height: 900rpx;
-  background: #40a7e7;
+  height: 930rpx;
+  background: url('https://createdemo.herokuapp.com/images/bg.jpg') center no-repeat;
+  background-size: 100%;
   color: #fff;
   text-align: center;
 }
