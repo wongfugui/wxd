@@ -33,6 +33,7 @@ Page({
       ak: globalData.ak
     })
     const success = (data) => {
+      wx.stopPullDownRefresh()
       const now = new Date()
       const weatherData = data.originalData.results[0]
       const temp = weatherData.weather_data[0].date.match(/\d+/g)[2]
@@ -46,7 +47,6 @@ Page({
         weather,
         pmLv: this.formatPM(weatherData.pm25)
       })
-      console.log(weatherData)
     }
     BMap.weather({
       location,
