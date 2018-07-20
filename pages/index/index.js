@@ -13,7 +13,10 @@ Page({
     temp: '',
     pmLv: '',
     date: '',
-    weatherList: []
+    // 是否切换了城市
+    cityChanged: false,
+    // 需要查询的城市
+    searchCity: '--',
   },
   onLoad: function() {
     this.getWeather()
@@ -21,11 +24,18 @@ Page({
   },
 
   onShow: function() {
-    console.log('showwwww')
+    if (this.data.cityChanged){
+      this.geocoder(this.data.searchCity, this.getWeather)
+    }
   },
 
   onPullDownRefresh(res) {
-    this.getWeather()
+    if (this.data.searchCity === '--'){
+      this.getWeather()
+    }else{
+      this.geocoder(this.data.searchCity, this.getWeather)
+    }
+    
   },
 
   getWeather: function(location) {
@@ -43,6 +53,7 @@ Page({
         swiper1: weatherData.weather_data.slice(0,2),
         swiper2: weatherData.weather_data.slice(2),
         temp,
+        searchCity: weatherData.currentCity,
         date: utils.formatTime(now),
         weather,
         pmLv: this.formatPM(weatherData.pm25)
@@ -74,7 +85,34 @@ Page({
     wx.navigateTo({
       url: '../cities/cities',
     })
-  }
+  },
 
+  // 地理位置编码
+  geocoder: (address, success) => {
+    wx.request({
+      url: getApp().setGeocoderUrl(address),
+      success(res) {
+        let data = res.data || {}
+        if (!data.status) {
+          location = (data.result || {}).location || {} // location结构 = {lng, lat}
+          success && success([location.lng, location.lat].join())
+        } else {
+          wx.showToast({
+            title: data.msg || '网络不给力，请稍后再试',
+            icon: 'none',
+          })
+        }
+      },
+      fail(res) {
+        wx.showToast({
+          title: res.errMsg || '网络不给力，请稍后再试',
+          icon: 'none',
+        })
+      },
+      complete() {
+
+      },
+    })
+  },
 
 })

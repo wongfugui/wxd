@@ -14,6 +14,25 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const isEmptyObject = (obj) => {
+  for (let i in obj) {
+    return false
+  }
+  return true
+}
+
+const groupBy = (array, f) => {
+  let groups = {};
+  array.forEach(function (o) {
+    let group = f(o);
+    groups[group] = groups[group] || [];
+    groups[group].push(o);
+  });
+  return groups
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime,
+  isEmptyObject,
+  groupBy
 }

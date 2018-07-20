@@ -21,14 +21,4 @@ App({
   setGeocoderUrl(address) {
     return `https://api.map.baidu.com/geocoder/v2/?address=${address}&output=json&ak=${this.globalData.ak}`
   },
-
-  groupBy: function(array, f) {
-    let groups = {};
-    array.forEach(function (o) {
-      let group = f(o);
-      groups[group] = groups[group] || [];
-      groups[group].push(o);
-    });
-    return groups
-  }
 })

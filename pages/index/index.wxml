@@ -5,7 +5,7 @@
     <view class='today'>
       <view class='city' bindtap='tapCity'>
         <image src='../../images/location.png'></image>
-        <text>{{weatherData.currentCity || '--'}}</text>
+        <text>{{searchCity}}</text>
       </view>
       <view class='update-date'>{{date}} 更新</view>
       <view class='temp'>
