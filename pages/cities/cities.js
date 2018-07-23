@@ -1,5 +1,5 @@
-let staticData = require('../../data/staticData.js')
-let utils = require('../../utils/util.js')
+import staticData from '../../data/staticData.js'
+import utils from '../../utils/util.js'
 Page({
   data: {
     alternative: null,

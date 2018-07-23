@@ -1,7 +1,5 @@
 //app.js
 
-const bmap = require('./lib/bmap-wx.js')
-
 App({
   onLaunch: function() {
     wx.getSystemInfo({

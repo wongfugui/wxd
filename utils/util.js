@@ -31,8 +31,10 @@ const groupBy = (array, f) => {
   return groups
 }
 
-module.exports = {
+const utils = {
   formatTime,
   isEmptyObject,
   groupBy
 }
+
+export default utils

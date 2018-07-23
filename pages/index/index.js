@@ -3,8 +3,8 @@
 const app = getApp()
 
 const globalData = getApp().globalData
-const bmap = require('../../lib/bmap-wx.js')
-const utils = require('../../utils/util')
+import bmap from '../../lib/bmap-wx.js'
+import utils from '../../utils/util'
 
 Page({
   data: {
