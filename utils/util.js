@@ -31,10 +31,32 @@ const groupBy = (array, f) => {
   return groups
 }
 
+const wxRequest = ({ url, data, method }) => {
+  const pro = new Promise((resolve, reject) => {
+    wx.request({
+      url: url,
+      method: method || 'GET',
+      data: data,
+      success: (res) => {
+        if (res && res.statusCode == 200) {
+          resolve(res.data)
+        } else {
+          reject(res)
+        }
+      },
+      fail: (err) => {
+        reject(err)
+      },
+    })
+  })
+  return pro
+}
+
 const utils = {
   formatTime,
   isEmptyObject,
-  groupBy
+  groupBy,
+  wxRequest,
 }
 
 export default utils
