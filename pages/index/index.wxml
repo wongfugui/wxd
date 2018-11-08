@@ -4,7 +4,7 @@
 
   <view class='content'>
     <view class='index-tab'>
-      <view wx:for='{{tabs}}' wx:for-index='index' data-index='{{index}}' wx:key='{{*this}}' class="{{curTab === index ? 'active' : ''}}" bindtap="switchTab">
+      <view wx:for='{{tabs}}' wx:for-index='index' data-index='{{index}}' wx:key='{{this}}' class="{{curTab === index ? 'active' : ''}}" bindtap="switchTab">
         {{item}}
       </view>
     </view>
